@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+      "ecmaVersion": 2017
+  },
+
+  "env": {
+      "es6": true,
+      "mocha": true
+  },
+
+  "plugins": [
+    "mocha"
+  ],
+
+  "extends": [
+    "plugin:mocha/recommended",
+    "google"
+  ],
+
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "max-len": "off"
+  }
+}
