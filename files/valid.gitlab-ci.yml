@@ -1,0 +1,26 @@
+stages:
+    - deploy
+
+.deploy_template: &deploy
+  stage: deploy
+  image:
+    name: hashicorp/terraform:0.12.7
+    entrypoint: [""]
+  script:
+    - echo "Deploying Stuff!"
+
+development_deploy:
+  <<: *deploy
+  only:
+    - development
+  tags:
+    - development
+    - life
+
+production_deploy:
+  <<: *deploy
+  only:
+    - production
+  tags:
+    - production
+    - life

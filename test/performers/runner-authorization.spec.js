@@ -15,9 +15,9 @@ describe('The Runner Authorization Module', function() {
           catFile: function(argArray) {
             return new Promise(function(resolve, reject) {
               if (argArray[1].includes('943ac77e2f118d9f9950b4265f3b3c4e3639be8f')) {
-                resolve(fs.readFileSync(path.resolve(__dirname, '../../test-data/valid.gitlab-ci.yml'), {encoding: 'utf-8'}));
+                resolve(fs.readFileSync(path.resolve(__dirname, '../../files/valid.gitlab-ci.yml'), {encoding: 'utf-8'}));
               } else if (argArray[1].includes('5bb9e579cb1518ceb6a45126527aea0877854d8a')) {
-                resolve(fs.readFileSync(path.resolve(__dirname, '../../test-data/invalid.gitlab-ci.yml'), {encoding: 'utf-8'}));
+                resolve(fs.readFileSync(path.resolve(__dirname, '../../files/invalid.gitlab-ci.yml'), {encoding: 'utf-8'}));
               } else {
                 throw new Error('Unexpected Test Case');
               }

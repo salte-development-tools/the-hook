@@ -3,9 +3,9 @@ const exec = require('child-process-promise').exec;
 const expect = require('chai').expect;
 
 describe('The root module entry point', function() {
-  before(function() {
-    process.chdir(path.resolve(__dirname, '../test-data'));
-  });
+  // before(function() {
+  //   process.chdir(path.resolve(__dirname, '../test-data'));
+  // });
 
   it('should return a missing argument error message when no arguments are passed', function() {
     return exec(`node ${path.resolve(__dirname, '../bin/the-hook.js')}`).then(function() {
