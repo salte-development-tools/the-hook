@@ -25,7 +25,7 @@ jobs:
         - npm run lint
         - npm test
     - stage: publish
-      node_js: 10
+      node_js: 12
       os: linux
       script:
         - npm test
